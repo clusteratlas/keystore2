@@ -88,6 +88,9 @@ function FirstPromise(_context){
 		// OR
 		
 		// on failure:
+		reject('some error message');
+		
+		// or this, if you wanna store it in the context.
 		_KeyStoreContext.set('error', 'some error message.');
 		reject(_context);
 		
@@ -102,9 +105,9 @@ function FirstPromise(_context){
 gulp.task(`test`, () => {
 	return FirstPromise('myContext')
 		.then((_context)=>SecondPromise(_context))
-			.catch((err)=>{throw err})
+			.catch((err)=>{throw new Error(err);})
 		.then((_context)=>ThirdPromise(_context))
-			.catch((err)=>{throw err});
+			.catch((err)=>{throw new Error(err);});
 });
 ```
 
