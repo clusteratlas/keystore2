@@ -64,7 +64,7 @@ _KeyStore.pullContext('myContext').pullContext('mySubContext').get('c');
 **Real-world example**
 
 ```js
-const gulp		= require('gulp');
+const gulp = require('gulp');
 const _KeyStore = require('keystore2');
 
 function FirstPromise(_context){
