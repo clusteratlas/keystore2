@@ -1,45 +1,22 @@
-# <%= moduleName %> [![Build Status](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>.svg?branch=master)](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>)
+# KeyStore2 [![Build Status](https://travis-ci.org/servercharlie/keystore2>.svg?branch=master)](https://travis-ci.org/servercharlie/keystore2)
 
->
+> yesh
 
 
 ## Install
 
 ```
-$ npm install --save <%= moduleName %>
+$ npm install --save keystore2
 ```
 
 
 ## Usage
 
 ```js
-const <%= camelModuleName %> = require('<%= moduleName %>');
-
-<%= camelModuleName %>('unicorns');
-//=> 'unicorns & rainbows'
+const _KeyStore = require('keystore2');
 ```
-
-
-## API
-
-### <%= camelModuleName %>(input, [options])
-
-#### input
-
-Type: `string`
-
-Lorem ipsum.
-
-#### options
-
-##### foo
-
-Type: `boolean`<br>
-Default: `false`
-
-Lorem ipsum.
 
 
 ## License
 
-MIT © [<%= name %>](https://github.com/<%= githubUsername %>)
+MIT © [servercharlie](https://github.com/servercharlie)
