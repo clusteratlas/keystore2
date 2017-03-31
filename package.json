@@ -1,0 +1,29 @@
+{
+  "name": "keystore2",
+  "version": "0.0.0",
+  "description": "Keystore2 - Because the first ones are inferior.",
+  "license": "MIT",
+  "repository": "",
+  "author": {
+    "name": "servercharlie",
+    "email": "servercharlie@hotmail.com",
+    "url": "http://twitter.com/servercharlie"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "xo": "^0.17.0"
+  }
+}
