@@ -117,6 +117,10 @@ gulp.task(`test`, () => {
 npm install && npm test
 ```
 
+**TO-DO**
+
+- Support get & set adapters, as callbacks.
+- 'has', hasOwnProperty - to check if property is set.
 
 ## License
 
