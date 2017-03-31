@@ -61,6 +61,53 @@ _KeyStore.pullContext('myContext').pullContext('mySubContext').get('c');
 // 789
 ```
 
+**Real-world example**
+
+```js
+const gulp		= require('gulp');
+const _KeyStore = require('keystore2');
+
+function FirstPromise(_context){
+
+	var _KeyStoreContext = _KeyStore.pullContext(_context);
+	
+	return new Promise(function(resolve, reject){
+	
+		// promise chain ejecting if context-based error is present
+		if(typeof _KeyStoreContext.get('error') == 'undefined'){
+			reject(_context);
+		}
+		
+		// some tasks..
+		var _someKey = _KeyStoreContext.get('someKey');
+		
+		// on success
+		_KeyStoreContext.set('newKey', 'sampleStringValue');
+		resolve(_context);
+		
+		// OR
+		
+		// on failure:
+		_KeyStoreContext.set('error', 'some error message.');
+		reject(_context);
+		
+	});
+	
+}
+
+// function SecondPromise...
+
+// function ThirdPromise...
+
+gulp.task(`test`, () => {
+	return FirstPromise('myContext')
+		.then((_context)=>SecondPromise(_context))
+			.catch((err)=>{throw err})
+		.then((_context)=>ThirdPromise(_context))
+			.catch((err)=>{throw err});
+});
+```
+
 **Testing w/ xo & ava**
 
 ```sh
