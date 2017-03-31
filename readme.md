@@ -1,4 +1,4 @@
-# KeyStore2 [![Build Status](https://travis-ci.org/servercharlie/keystore2>.svg?branch=master)](https://travis-ci.org/servercharlie/keystore2)
+# KeyStore2 [![Build Status](https://travis-ci.org/servercharlie/keystore2.svg?branch=master)](https://travis-ci.org/servercharlie/keystore2)
 
 > yesh
 
