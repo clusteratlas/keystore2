@@ -23,7 +23,9 @@ $ npm update
 **Basics**
 
 ```js
-const _KeyStore = require('keystore2');
+const KeyStore	=	require('keystore2');
+
+var _KeyStore	= new KeyStore();
 
 _KeyStore.set('a', 123);
 // true
@@ -42,7 +44,9 @@ _KeyStore.has('b');
 **Using contexts**
 
 ```js
-const _KeyStore = require('keystore2');
+const KeyStore	=	require('keystore2');
+
+var _KeyStore	= new KeyStore();
 
 _KeyStore.pullContext('myContext').set('b', 456);
 // true
@@ -61,7 +65,9 @@ _KeyStore.pullContext('myContext').get('b');
 **Nested contexts**
 
 ```js
-const _KeyStore = require('keystore2');
+const KeyStore	=	require('keystore2');
+
+var _KeyStore	= new KeyStore();
 
 _KeyStore.pullContext('myContext').pullContext('mySubContext').set('c', 789);
 // true
@@ -73,7 +79,9 @@ _KeyStore.pullContext('myContext').pullContext('mySubContext').get('c');
 **Random contexts** (Added in 1.1.0)
 
 ```js
-const _KeyStore = require('keystore2');
+const KeyStore	=	require('keystore2');
+
+var _KeyStore	= new KeyStore();
 
 var randomContext = _KeyStore.pullRandomContext();
 
@@ -100,7 +108,9 @@ randomContext.pullContext('nestedInRandom').get('c');
 
 ```js
 const gulp = require('gulp');
-const _KeyStore = require('keystore2');
+const KeyStore	=	require('keystore2');
+
+var _KeyStore	= new KeyStore();
 
 function FirstPromise(_context){
 
