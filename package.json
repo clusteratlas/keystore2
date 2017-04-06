@@ -1,6 +1,6 @@
 {
   "name": "keystore2",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Globally reusable value / reference storage that supports all data types; and 2 because all the first ones are inferior.",
   "license": "MIT",
   "repository": "https://github.com/servercharlie/keystore2",
