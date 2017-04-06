@@ -41,3 +41,32 @@ test('context clear', t => {
 	_KeyStore.clearContext('sample context');
 	t.is(_KeyStore.pullContext('sample context').get('a'), undefined);
 });
+
+test('random context test', t => {
+	var randomContext = _KeyStore.pullRandomContext();
+	var randomContextId = randomContext.id;
+	randomContext.set('a', 5);
+	var randomContextCheck = false;
+	if (_KeyStore.pullContext(randomContextId).get('a') === 5) {
+		randomContextCheck = true;
+	}
+	t.is(randomContextCheck, true);
+});
+
+test('nested random context test', t => {
+	var randomContext = _KeyStore.pullRandomContext();
+	var randomContextId = randomContext.id;
+	randomContext.set('a', 5);
+	var randomContextCheck = false;
+	if (_KeyStore.pullContext(randomContextId).get('a') === 5) {
+		randomContextCheck = true;
+	}
+	var nestedRandomContext = randomContext.pullRandomContext();
+	var nestedRandomContextId = nestedRandomContext.id;
+	nestedRandomContext.set('b', 10);
+	var nestedRandomContextCheck = false;
+	if (randomContext.pullContext(nestedRandomContextId).get('b') === 10) {
+		nestedRandomContextCheck = true;
+	}
+	t.is(randomContextCheck && nestedRandomContextCheck, true);
+});

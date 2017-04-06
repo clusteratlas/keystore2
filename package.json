@@ -1,9 +1,9 @@
 {
   "name": "keystore2",
   "version": "1.0.10",
-  "description": "Keystore2 - Because the first ones are inferior.",
+  "description": "Globally reusable value / reference storage that supports all data types; and 2 because all the first ones are inferior.",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/servercharlie/keystore2",
   "author": {
     "name": "servercharlie",
     "email": "servercharlie@hotmail.com",
@@ -21,7 +21,9 @@
   "keywords": [
     "key, store, value, storage, variable, dicks, lol, servercharlie"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "uuid-random": "^1.0.5"
+  },
   "devDependencies": {
     "ava": "^0.17.0",
     "xo": "^0.17.0"

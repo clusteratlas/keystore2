@@ -1,4 +1,5 @@
 'use strict';
+var uuid = require('uuid-random');
 
 function KeyStore2() {
 	this.storage = {};
@@ -28,6 +29,15 @@ KeyStore2.prototype.pullContext = function (_context) {
 	}
 	this.contexts[_context] = new KeyStore2();
 	return this.contexts[_context];
+};
+KeyStore2.prototype.pullRandomContext = function () {
+	var UUIDv4 = uuid();
+	if (typeof this.contexts[UUIDv4] === 'object') {
+		return this.contexts[UUIDv4];
+	}
+	this.contexts[UUIDv4] = new KeyStore2();
+	this.contexts[UUIDv4].id = UUIDv4;
+	return this.contexts[UUIDv4];
 };
 
 if (typeof module !== 'undefined') {
