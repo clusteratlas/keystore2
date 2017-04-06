@@ -89,8 +89,13 @@ randomContext.set('a', 5);
 randomContext.get('a');
 // 5
 
-// Note:
-// - Random contexts can also be nested!
+// Random contexts can also be nested!
+
+randomContext.pullContext('nestedInRandom').set('c', 123);
+// true
+
+randomContext.pullContext('nestedInRandom').get('c');
+// 123
 
 ```
 
