@@ -13,9 +13,6 @@
 
 ```
 $ npm install --save keystore2
-
-$ npm update
-# updating an old version installed
 ```
 
 ## Usage
