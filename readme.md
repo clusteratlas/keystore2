@@ -15,6 +15,11 @@
 $ npm install --save keystore2
 ```
 
+## Update (incase you got old version, and you wanna update to new ones)
+
+```
+$ npm update
+```
 
 ## Usage
 
@@ -84,6 +89,9 @@ randomContext.set('a', 5);
 randomContext.get('a');
 // 5
 
+// Note:
+// - Random contexts can also be nested!
+
 ```
 
 **Real-world example**
@@ -147,6 +155,8 @@ gulp.task(`test`, () => {
 			- random contexts can be nested just like pulled contexts
 		- keystore.has(key)
 			- to check if key is set, returns true or false.
+		- readme updates
+			- lol
 - Todo's:
 	- Context & Key Storage Adapters, ie, using redis or other remote cache microservices.
 - References:
