@@ -109,7 +109,7 @@ function FirstPromise(_context){
 	return new Promise(function(resolve, reject){
 	
 		// promise chain ejecting if context-based error is present
-		if(typeof _KeyStoreContext.get('error') == 'undefined'){
+		if(_KeyStoreContext.has('error') === true){
 			reject(_context);
 		}
 		
