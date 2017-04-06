@@ -13,12 +13,9 @@
 
 ```
 $ npm install --save keystore2
-```
 
-## Update (incase you got old version, and you wanna update to new ones)
-
-```
 $ npm update
+# updating an old version installed
 ```
 
 ## Usage
