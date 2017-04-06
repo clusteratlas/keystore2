@@ -9,6 +9,14 @@ test('set & get', t => {
 	t.is(_KeyStore.get('a'), 1);
 });
 
+test('has the fucking value / has(existing_key) = true ', t => {
+	t.is(_KeyStore.has('a'), true);
+});
+
+test('does not have the fucking value / has(missing_key) = false ', t => {
+	t.is(_KeyStore.has('zxvczxvc'), false);
+});
+
 test('string keys only for set.', t => {
 	var hasError = false;
 	try {

@@ -19,6 +19,9 @@ KeyStore2.prototype.get = function (_key) {
 	}
 	throw new Error('string only!');
 };
+KeyStore2.prototype.has = function (_key) {
+	return Object.prototype.hasOwnProperty.call(this.storage, _key);
+};
 KeyStore2.prototype.clearContext = function (_context) {
 	this.contexts[_context].storage = {};
 	return true;

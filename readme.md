@@ -28,6 +28,13 @@ _KeyStore.set('a', 123);
 
 _KeyStore.get('a');
 // 123
+
+_KeyStore.has('a');
+// true
+
+_KeyStore.has('b');
+// false
+
 ```
 
 **Using contexts**
@@ -59,6 +66,24 @@ _KeyStore.pullContext('myContext').pullContext('mySubContext').set('c', 789);
 
 _KeyStore.pullContext('myContext').pullContext('mySubContext').get('c');
 // 789
+```
+
+**Random contexts** (Added in 1.1.0)
+
+```js
+const _KeyStore = require('keystore2');
+
+var randomContext = _KeyStore.pullRandomContext();
+
+randomContext.id;
+// uuidv4 random id, like '0b99b82f-62cf-4275-88b3-de039020f14e'
+
+randomContext.set('a', 5);
+// true
+
+randomContext.get('a');
+// 5
+
 ```
 
 **Real-world example**
@@ -111,16 +136,35 @@ gulp.task(`test`, () => {
 });
 ```
 
+**Notes, References, Todo's, etc.**
+- Changelog:
+	- 1.1.0
+		- keystore.pullRandomContext()
+			- creates a uuidv4-based randomized context.
+		- keystore.pullRandomContext().id
+			- 'id' retrieves the generated UUIDv4 for the random context.
+		- nested random contexts
+			- random contexts can be nested just like pulled contexts
+		- keystore.has(key)
+			- to check if key is set, returns true or false.
+- Todo's:
+	- Context & Key Storage Adapters, ie, using redis or other remote cache microservices.
+- References:
+	- Jed's UUIDv4 Implementation, used in randomized context implementation.
+		- https://www.npmjs.com/package/uuid-random
+	- Mozilla Developer Network, for all the inner-workings.
+		- https://developer.mozilla.org/en-US/docs/Web/JavaScript
+	- XO for linting
+		- https://github.com/sindresorhus/xo
+	- AVA for testing
+		- https://github.com/avajs/ava
+
 **Testing w/ xo & ava**
 
 ```sh
 npm install && npm test
 ```
 
-**TO-DO**
-
-- Support get & set adapters, as callbacks.
-- 'has', hasOwnProperty - to check if property is set.
 
 ## License
 
