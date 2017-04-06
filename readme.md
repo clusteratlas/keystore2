@@ -23,7 +23,7 @@ $ npm update
 **Basics**
 
 ```js
-const KeyStore	=	require('keystore2');
+const KeyStore	= require('keystore2');
 
 var _KeyStore	= new KeyStore();
 
@@ -44,7 +44,7 @@ _KeyStore.has('b');
 **Using contexts**
 
 ```js
-const KeyStore	=	require('keystore2');
+const KeyStore	= require('keystore2');
 
 var _KeyStore	= new KeyStore();
 
@@ -65,7 +65,7 @@ _KeyStore.pullContext('myContext').get('b');
 **Nested contexts**
 
 ```js
-const KeyStore	=	require('keystore2');
+const KeyStore	= require('keystore2');
 
 var _KeyStore	= new KeyStore();
 
@@ -79,7 +79,7 @@ _KeyStore.pullContext('myContext').pullContext('mySubContext').get('c');
 **Random contexts** (Added in 1.1.0)
 
 ```js
-const KeyStore	=	require('keystore2');
+const KeyStore	= require('keystore2');
 
 var _KeyStore	= new KeyStore();
 
@@ -108,7 +108,7 @@ randomContext.pullContext('nestedInRandom').get('c');
 
 ```js
 const gulp = require('gulp');
-const KeyStore	=	require('keystore2');
+const KeyStore	= require('keystore2');
 
 var _KeyStore	= new KeyStore();
 
