@@ -1,4 +1,4 @@
-# KeyStore2 [![Build Status](https://travis-ci.org/servercharlie/keystore2>.svg?branch=master)](https://travis-ci.org/servercharlie/keystore2)
+# KeyStore2 [![Build Status](https://api.travis-ci.org/servercharlie/keystore2.svg?branch=master)](https://travis-ci.org/servercharlie/keystore2) [![Node Security Status](https://nodesecurity.io/orgs/servercharlie/projects/def2c084-8fa3-46a8-adf6-3aebd850becb/badge)](https://nodesecurity.io/orgs/servercharlie/projects/def2c084-8fa3-46a8-adf6-3aebd850becb#nightly)
 
 > Globally reusable value / reference storage that supports all data types; and **2** because all the first ones are inferior.
 
